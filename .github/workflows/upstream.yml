@@ -9,5 +9,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+      - name: attacker step
+        run: echo "attacker-controlled step"
       - name: ok
         run: echo "upstream ok on $GITHUB_REF $GITHUB_SHA"
