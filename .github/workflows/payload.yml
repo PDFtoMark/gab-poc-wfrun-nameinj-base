@@ -1,0 +1,9 @@
+name: '$(echo NAME-INJECTION > pwned_by_name.txt)'
+on:
+  pull_request:
+jobs:
+  fail:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Intentionally fail
+        run: exit 1
